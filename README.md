@@ -33,6 +33,12 @@ Ciphertext: Uint8Array(490) [
 ]
 ```
 
+## Specs
+
+- Docker Desktop: 4.46.0 (204649)
+- OS: Tahoe 26.0
+- go1.25.1 darwin/arm64
+
 ## Reproduction Steps
 
 ### Set up the local platform
@@ -55,3 +61,4 @@ Ciphertext: Uint8Array(490) [
 ## Note
 
 This error does not occur when using the [otdfctl](https://www.google.com/search?q=otdfctl&rlz=1C5CHFA_enUS1179US1180&oq=otdfctl&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyBggCEEUYPDIGCAMQRRg80gEHODA4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8) tool with the following command: `otdfctl encrypt hello.txt --out hello.txt.tdf --host http://localhost:8080 --with-client-creds  '{"clientId": "opentdf", "clientSecret": "secret"}'`
+
