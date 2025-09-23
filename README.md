@@ -2,7 +2,7 @@
 
 This project contains a minimal reproduction of a potential bug using the documented code in the [OpenTDF web-sdk README](https://github.com/opentdf/web-sdk/blob/49798854abf0663b2c29848adc2ca3cba3eddf67/README.md).
 
-When attempting to encrypt with the [OpenTDF web-sdk](https://github.com/opentdf/web-sdk), I encountered a `NetworkError` indicating that the KAS is misconfigured due to a missing `BaseKey` in the `WellKnownConfiguration`:
+When calling `NanoTDFClient.encrypt()`, I encountered a `NetworkError` indicating that the KAS is misconfigured due to a missing `BaseKey` in the `WellKnownConfiguration`. Interestingly, Ciphertext still returns a value.
 
 ```bash
 <*>@Mac opentdf-basekey-bug % npm run dev
@@ -31,14 +31,6 @@ Ciphertext: Uint8Array(490) [
    66, 174, 119, 152,
   ... 390 more items
 ]
-<*>@Mac opentdf-basekey-bug % npm install
-
-removed 54 packages, and audited 10 packages in 920ms
-
-3 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities
 ```
 
 ## Reproduction Steps
