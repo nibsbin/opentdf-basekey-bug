@@ -1,0 +1,12 @@
+{
+  "name": "bug-repro",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "node hello_world.js"
+  },
+  "description": "Minimal repro for opentdf-basekey-bug",
+  "dependencies": {
+    "@opentdf/sdk": "^0.4.0"
+  }
+}
