@@ -1,6 +1,6 @@
 # Basekey Misconfiguration Bug
 
-This project contains a minimal reproduction of a potential bug using the documented code in the [OpenTDF web-sdk README](https://github.com/opentdf/web-sdk/blob/49798854abf0663b2c29848adc2ca3cba3eddf67/README.md).
+[This project](https://github.com/nibsbin/opentdf-basekey-bug) contains a minimal reproduction of a potential bug regarding the documented code in the [opentdf/web-sdk](https://github.com/opentdf/web-sdk/blob/49798854abf0663b2c29848adc2ca3cba3eddf67/README.md).
 
 When calling `NanoTDFClient.encrypt()`, I encountered a `NetworkError` indicating that the KAS is misconfigured due to a missing `BaseKey` in the `WellKnownConfiguration`. Interestingly, Ciphertext still returns a value.
 
@@ -70,11 +70,11 @@ time=2025-09-23T23:55:21.542-04:00 level=DEBUG msg="wellknown configuration cont
 
 This error does not occur when using the [otdfctl](https://www.google.com/search?q=otdfctl&rlz=1C5CHFA_enUS1179US1180&oq=otdfctl&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyBggCEEUYPDIGCAMQRRg80gEHODA4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8) tool with the following command: `otdfctl encrypt hello.txt --out hello.txt.tdf --host http://localhost:8080 --with-client-creds  '{"clientId": "opentdf", "clientSecret": "secret"}'`
 
-Full platform logs are included in included in [platform.log](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/platform.log).
+Full platform logs are included in [platform.log](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/platform.log).
 
 ## Attachments
 - [opentdf.yaml](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/opentdf.yaml)
 - [hello_world.js](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/hello_world.js)
 - [startup.sh](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/startup.sh)
-- [Consuming.md](https://github.com/opentdf/platform/blob/release/protocol/go/v0.11/docs/Consuming.md)
 - [platform.log](https://github.com/nibsbin/opentdf-basekey-bug/blob/main/platform.log)
+- [Consuming.md](https://github.com/opentdf/platform/blob/release/protocol/go/v0.11/docs/Consuming.md)
