@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "node hello_world.js"
+    "dev": "tsx hello_world.ts"
   },
   "description": "Minimal repro for opentdf-basekey-bug",
   "dependencies": {
-    "@opentdf/sdk": "0.4.0"
+    "@opentdf/sdk": "0.4.0",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2"
   }
 }
